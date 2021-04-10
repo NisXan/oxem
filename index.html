@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <title>Демо задание - Никита Ашенбреннер</title>
+  <meta name="description" content="Демо задание - Никита Ашенбреннер от Oxem Studio">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <link rel="shortcut icon" href="images/manifest/favicon.ico" type="image/x-icon">
+  <meta name="title" content="Никита Ашенбреннер - Frontend–разработчик. Создание сайтов, верстка, веб-разработка.">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/jquery.lazy.min.js"></script>
+  <script src="js/swiper-bundle.min.js" defer></script>
+  <script src="js/rangeslider.min.js" defer></script>
+  <script src="js/script.js"></script>
+</head>
+<body>
+  <main class="main">
+    <header class="header">
+      <div class="header__wrapper">
+        <div class="logo" itemscope itemtype="http://schema.org/Organization">
+          <meta itemprop="name" content="Leasing Car">
+          <meta itemprop="description" content="Company Description">
+          <a itemprop="url" href="https://test.nisxan.ru/" class="logo__icon">
+            <img class="logo__icon-desktop lazy" itemprop="logo" src="images/logo.svg" loading="lazy" alt="Leasing Car">
+            <img class="logo__icon-mobile lazy" src="images/logo-mobile.svg" loading="lazy" alt="Leasing Car">
+          </a>
+        </div>
+
+        <p class="header__desc">лизинговая компания</p>
+
+        <button class="header__toggle" aria-label="Открыть меню"></button>
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="#services" class="menu__link init-drop">Услуги</a>
+
+              <ul class="menu__list-dropdown">
+                <li class="menu__item-dropdown">
+                  <a href="#for-personal-use" class="menu__link-dropdown">Для личного пользования</a>
+                </li>
+                <li class="menu__item-dropdown">
+                  <a href="#for-legal-entities" class="menu__link-dropdown">Для юридических диц</a>
+                </li>
+                <li class="menu__item-dropdown">
+                  <a href="#calculator" class="menu__link-dropdown">Калькулятор</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="menu__item">
+              <a href="#portfolio" class="menu__link">Портфолио</a>
+            </li>
+            <li class="menu__item">
+              <a href="#price" class="menu__link">Стоимость</a>
+            </li>
+            <li class="menu__item-btn">
+              <button class="header__order modal-popup">Оставить заявку</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="slider">
+      <div class="slider__wrapper">
+        <div class="slider__card">
+          <div class="slider__text">
+            <h1 class="slider__text-title">Авто в лизинг для физических лиц</h1>
+            <h2 class="slider__text-posttitle">Получите машину за 5 дней</h2>
+            <button class="slider__text-btn modal-popup">Оставить заявку</button>
+          </div>
+          <img src="images/slide.jpg" loading="lazy" alt="auto" class="slide__img lazy">
+        </div>
+        <div class="slider__card">
+          <div class="slider__text">
+            <h3 class="slider__text-title">Авто в лизинг для физических лиц</h3>
+            <h4 class="slider__text-posttitle">Получите машину за 5 дней</h4>
+            <button class="slider__text-btn modal-popup">Оставить заявку</button>
+          </div>
+          <img src="images/slide.jpg" loading="lazy" alt="auto" class="slide__img lazy">
+        </div>
+        <div class="slider__card">
+          <div class="slider__text">
+            <h3 class="slider__text-title">Авто в лизинг для физических лиц</h3>
+            <h4 class="slider__text-posttitle">Получите машину за 5 дней</h4>
+            <button class="slider__text-btn modal-popup">Оставить заявку</button>
+          </div>
+          <img src="images/slide.jpg" loading="lazy" alt="auto" class="slide__img lazy">
+        </div>
+        <div class="slider__card">
+          <div class="slider__text">
+            <h3 class="slider__text-title">Авто в лизинг для физических лиц</h3>
+            <h4 class="slider__text-posttitle">Получите машину за 5 дней</h4>
+            <button class="slider__text-btn modal-popup">Оставить заявку</button>
+          </div>
+          <img src="images/slide.jpg" loading="lazy" alt="auto" class="slide__img lazy">
+        </div>
+        <div class="slider__card">
+          <div class="slider__text">
+            <h3 class="slider__text-title">Авто в лизинг для физических лиц</h3>
+            <h4 class="slider__text-posttitle">Получите машину за 5 дней</h4>
+            <button class="slider__text-btn modal-popup">Оставить заявку</button>
+          </div>
+          <img src="images/slide.jpg" alt="auto" loading="lazy" class="slide__img lazy">
+        </div>
+        <div class="slider__card">
+          <div class="slider__text">
+            <h3 class="slider__text-title">Авто в лизинг для физических лиц</h3>
+            <h4 class="slider__text-posttitle">Получите машину за 5 дней</h4>
+            <button class="slider__text-btn modal-popup">Оставить заявку</button>
+          </div>
+          <img src="images/slide.jpg" alt="auto" loading="lazy" class="slide__img lazy">
+        </div>
+      </div>
+
+      <button class="slider__button slider__button-prev" aria-label="Предыдущий слайд"><svg width="24" height="24"><circle transform="rotate(-90)" r="11" cx="-12" cy="12" /></svg></button>
+      <button class="slider__button slider__button-next" aria-label="Следующий слайд"></button>
+      <div class="slider__pagination paginator" aria-hidden="true"></div>
+    </section>
+
+    <section class="calculator" id="calculator">
+      <h2 class="calculator__title">Рассчитайте стоимость автомобиля в лизинг</h2>
+      <form class="form">
+
+        <div class="form__col">
+          <label class="form__label">Стоимость автомобиля</label>
+          <div class="form__input">
+            <input type="text" id="priceAuto-value" class="form__input-value" value="3 300 000">
+            <span class="form__input-index">₽</span>
+            <input id="priceAuto-range" type="range" min="1000000" max="6000000" step="1000" value="3300000">
+          </div>
+        </div>
+
+        <div class="form__col">
+          <label class="form__label">Первоначальный взнос</label>
+          <div class="form__input">
+            <input type="text" id="firstPayment-input" class="form__input-value" value="429 000 ₽">
+            <span class="form__input-percent">13%</span>
+            <input id="firstPayment-range" type="range" min="10" max="60" step="1" value="13">
+          </div>
+        </div>
+
+        <div class="form__col">
+          <label class="form__label">Срок лизинга</label>
+          <div class="form__input">
+            <input type="text" id="leaseTerm-input" class="form__input-value" value="60">
+            <span class="form__input-index">мес.</span>
+            <input id="leaseTerm-range" type="range" min="1" max="60" step="1" value="60">
+          </div>
+        </div>
+
+        <div class="form__col">
+          <label for="sumLease" class="form__label">Сумма договора лизинга</label>
+          <input type="text" class="form__control-sum" name="sumLease" id="sumLease" value="4 467 313 ₽" disabled>
+        </div>
+
+        <div class="form__col">
+          <label for="monthlyPayment" class="form__label">Ежемесячный платеж от</label>
+          <input type="text" class="form__control-sum" name="monthlyPayment" id="monthlyPayment" value="114 455 ₽" disabled>
+        </div>
+
+        <div class="form__col">
+          <button class="modal__submit modal-popup">Оставить заявку</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <div id="popup-container" class="modal">
+    <div id="feedback" class="modal__content">
+      <button class="close" aria-label="Закрыть окно"></button>
+      <div class="modal__wrapper">
+        <h2 class="modal__title">Онлайн-заявка</h2>
+        <p class="modal__desc">Заполните форму, и мы вскоре свяжемся с вами, чтобы ответить на все вопросы</p>
+
+        <form id="form" class="modal-form" method="post">
+          <div class="modal-form__input">
+            <label for="formPhone" class="modal-form__label">Телефон <span class="modal-form__label-star">*</span></label>
+            <input type="text" class="modal-form__control" name="phone" id="formPhone" placeholder="+7 (921) 123 45 67" required>
+          </div>
+          <div class="modal-form__input">
+            <input type="text" class="modal-form__control" name="name" id="formName" placeholder="Имя" required>
+          </div>
+          <input type="text" name="priceAutoParse" id="priceAutoParse" hidden>
+          <input type="text" name="firstPaymentParse" id="firstPaymentParse" hidden>
+          <input type="text" name="leaseTermParse" id="leaseTermParse" hidden>
+          <input type="text" name="priceAutoParse" id="sumLeaseParse" hidden>
+          <input type="text" name="priceAutoParse" id="monthlyPaymentParse" hidden>
+          <div class="modal-form__wrapper">
+            <p class="modal-form__text">Нажимая на кнопку «Оставить заявку», я даю согласие <a href="#" class="modal-form__text-link" target="_blank">на обработку персональных данных</a></p>
+            <button type="submit" class="modal-modal__submit">Оставить заявку</button>
+          </div>
+          <div id="form_result_6"></div>
+        </form>
+        <div class="modal__social">
+          <a href="#whatsapp" class="modal__social-link whatsapp-social" target="_blank" aria-label="Whatsapp social"></a>
+          <a href="#telegram" class="modal__social-link telegram-social" target="_blank" aria-label="Telegram social"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
