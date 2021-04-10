@@ -87,11 +87,28 @@ textarea,
 select {
   outline: none;
   font: inherit;
+  box-shadow: none;
   -webkit-transition: all 300ms;
   -o-transition: all 300ms;
   transition: all 300ms;
 }
-
+input:disabled {
+  outline: none;
+  color: #111111;
+  font: inherit;
+  box-shadow: none;
+  -webkit-transition: all 300ms;
+  -o-transition: all 300ms;
+  transition: all 300ms;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover {
+  -webkit-box-shadow: 0 0 0 30px #F3F3F4 inset !important;
+}
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+  -webkit-box-shadow: 0 0 0 30px #fff inset !important;
+}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
