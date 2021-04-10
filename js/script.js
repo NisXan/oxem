@@ -9,6 +9,9 @@ $(function() {
     slideClass: 'slider__card',
     preloadImages: false,
     lazy: true,
+    autoplay: {
+      delay: 10000,
+    },
     pagination: {
       el: '.slider__pagination',
       type: 'bullets',
@@ -25,14 +28,43 @@ $(function() {
   $('.lazy').lazy();
   $('#formPhone').mask('+7 (999) 999 99 99');
 
+  $('button').click((e) => {
+    $(e.target).addClass('loading').prop("disabled", true);
+    setTimeout (function() {
+      $(e.target).removeClass('loading').prop("disabled", false);
+    }, 1000);
+  })
 
-  const ChangeSlide = function(){
-    let numSlide = (swiper.realIndex+1)*24
-    $('.slider__button-next').html('<svg width="48" height="48"><circle transform="rotate(-90)" r="23" cx="-24" cy="24" /><circle transform="rotate(-90)" style="stroke-dasharray:' + numSlide + 'px 360px;" r="23" cx="-24" cy="24" /></svg>');
+
+  const BigCircle = function(){
+    const bigCircle = $('.slider__button-next');
+    let valEl = 0;
+    $({numberValue: valEl}).animate({numberValue: 100}, {
+      duration: 10000,
+      easing: 'linear',
+      step: function () {
+        valEl = Math.ceil(this.numberValue) * 160 / 100;
+        bigCircle.html('<svg width="48" height="48" ><circle transform="rotate(-90)" r="23" cx="-24" cy="24" /><circle transform="rotate(-90)" style="stroke-dasharray:' + valEl + 'px 408px;" r="23" cx="-24" cy="24" /></svg>');
+      }
+    });
   };
-  ChangeSlide();
+  const SmallCircle = function(){
+    const smallCircle = $('.slider__button-prev');
+    let valEl = 0;
+    $({numberValue: valEl}).animate({numberValue: 100}, {
+      duration: 10000,
+      easing: 'linear',
+      step: function () {
+        valEl = Math.ceil(this.numberValue) * 75 / 100;
+        smallCircle.html('<svg width="24" height="24"><circle transform="rotate(-90)" r="11" cx="-12" cy="12" /><circle transform="rotate(-90)" style="stroke-dasharray:' + valEl + 'px 408px;" r="11" cx="-12" cy="12" /></svg>');
+      }
+    });
+  };
+  BigCircle();
+  SmallCircle();
   swiper.on('slideChange', () => {
-    ChangeSlide();
+    BigCircle();
+    SmallCircle();
   });
 
   const priceAutoRange = $('#priceAuto-range').rangeslider({
@@ -187,7 +219,13 @@ $(function() {
     }
   });
 
-
+  $('.modal-form__control').on('blur', (e) => {
+    if ($(e.target).val() != '') {
+      $(e.target).parent().addClass('valid')
+    } else {
+      $(e.target).parent().removeClass('valid')
+    }
+  })
 
   $('.header__toggle').click(function () {
     $('body').toggleClass('active');
